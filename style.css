@@ -1,0 +1,234 @@
+/* TODO(you): Write the CSS to finish the assignment! */
+
+/* Common Font faces, size and colors */
+body{
+    font-family: 'Proxima Nova', 'Helvetica', 'Arial', sans-serif;
+    font-size: 18px;
+    color: #222222;
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* Header contains Course name and MERN stack */
+header{
+    height: 80px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;  /* set a #ccc border in the bottom that is 1 px thick */
+}
+header #coursename{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color:#ee3322;
+}
+header #mernstack{
+    display: inline-block;
+}
+header #mernstack .mern{
+    width: 50px;
+    display: inline-block;
+    background-color: #ffee00;
+    border-radius: 100%; /* rounded corners with radius 100% */
+} 
+header #mernstack .mern p{  
+    text-align: center;   
+    font-weight: bold;
+    transform: rotate(-30deg); /*rotates MERN Stack 30 degrees to the left */
+}
+
+/* Article contains 4 main sections: quiz name, introduction, attempt-quiz and review-quiz */
+article #quiz-name{
+    background-image: url(images/background.jpg);
+    background-size:cover; 
+    background-repeat: no-repeat;
+
+    height: 425px;
+    width: 700px;
+    
+    max-width: 100%;
+    max-height: 100%;
+   
+    display:flex;
+    justify-content: center;  /*space the items out evenly on the main axis*/
+    align-items: center;
+}
+article #quiz-name h1{
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 75%;
+
+    font-family: 'Pangolin', 'Trebuchet MS', cursive;
+    font-size: 60px;
+    color:black;
+    padding: 10px;      /*Space between the border and the content of h1 */
+}
+
+/* set the properties of Introduction section */
+article #introduction .author{
+    font-size: 14px;
+    text-align: center;
+}
+article #introduction .start{
+    text-align: center;
+    background-color: #f1f1f1;
+    border:1px solid #ccc;
+    padding: 18px;
+    margin-bottom: 22.41px; /* make it be similar to default margin of web page  */
+}
+article #introduction .start p{
+    margin-bottom: 36px;
+}
+
+/* set the properties of blue button */
+article .bluebutton button{
+    background-color:#2196F3;
+    color: white;
+    border: none;
+    padding: 18px;
+}
+article .bluebutton button:hover{
+    background-color:#0d8bf2;      /* When users move the mouse over, the background color is #0d8bf2 */
+}
+
+/* set the properties of form and its elements */
+article form{
+    margin: 30px 0;
+    display: flex;
+    flex-direction:column;
+}
+article form h2{
+    margin-top:auto;
+}
+article form h3{
+    margin:0 0 30px 0;
+    font-weight: normal;
+    font-size:inherit;  /* causes font-size for h3 is specified take the computed value of the property from body */
+}
+
+/* set the properties of choice list */
+article .option{
+    background-color: #f1f1f1;
+    margin:1px 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+article .option:hover{
+    background-color: #ddd;     /*When users move the mouse over, the background color is #ddd */
+}
+article .option input[type="radio"]{
+    margin: 15px;      /* Space between radio & text */
+    z-index: 1;
+}
+
+/* set the properties of choice list in the attempt-quiz section */
+article #attempt-quiz .option label{
+    padding: 15px 0;        /* Space between radio & text */
+    flex-grow: 1;
+    margin-left: -42.5px;
+    padding-left: 42.5px;
+}
+article #attempt-quiz .option input[type="radio"]:checked + label{
+    background-color: #ddd; /*When users selected the answer, the background color is #ddd */
+}
+
+/* set the properties of green button */
+article .greenbutton{
+    text-align: center;
+    background-color: #f1f1f1;
+    border:1px solid #ccc;
+    padding: 18px;
+    margin-bottom: 22.41px; /* make it be similar to default margin of web page  */
+}
+article .greenbutton button{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 18px;
+}
+article .greenbutton button:hover{
+    background-color:#46a049; /* When users move the mouse over, the background color is #46a049 */
+}
+
+/* set the properties of choice list in the review-quiz section */
+article #review-quiz .option{
+    pointer-events:none;  /* make the radio boxes in the review-quiz section be disabled */
+}
+article #review-quiz .option input[type = "radio"]{
+    opacity: 0.5;       /* specify the opacity of radio button */
+}
+
+/* After completing the quiz,
+    correct answer has green background,
+    wrong answer has red background,
+    the label "Correct/your answer is at the far end of answer
+ */
+article #attempt-quiz .option label{
+    padding: 15px 0;
+    flex-grow: 1;
+    margin-left: -42.5px;
+    padding-left: 42.5px;
+}
+article #attempt-quiz .option .right{
+    background-color: #d4edda !important;
+}
+article #attempt-quiz .option .wrong{
+    background-color:#f8d7da !important;
+}
+article #attempt-quiz .option .correct{
+    background-color: #ddd !important;
+}
+
+/* set the properties of the label: Correct answer/ Your answer */
+article #attempt-quiz .option{
+    position:relative;
+}
+article #attempt-quiz .option .correctanswer{
+    position:absolute;
+    right: 8px;
+    padding: 8px;
+
+    background-color: rgba(0,0,0, 0.2);
+    color: white;
+}
+article #attempt-quiz .option .youranswer{
+    position:absolute;
+    right: 8px;
+    padding: 8px;
+    
+    background-color: rgba(0,0,0, 0.2);
+    color: white;
+}
+
+/* Result view */
+article #review-quiz .result {
+    text-align: center;
+    background-color:#f1f1f1;
+    border: 1px solid #dcdcdc;
+    padding: 18px;
+    margin: 22.41px 0; /* make it be similar to default margin of web page  */
+}
+
+
+.hidden{
+    display: none !important;
+}
+#attempt-quiz.hidden div #submitquiz{
+    display:none !important;
+}
+/* If the device screen size is less than 700px wide, 
+    the width of the page content should be 95% instead of 700px */
+@media only screen and (max-width:700px){
+    body{
+        width:95%; 
+    }
+}
+/* If the device screen size is less than 500px wide,
+the yellow circles in the page header should not appear */ 
+@media only screen and (max-width:500px){
+    header #mernstack{
+        display: none;
+    }
+}

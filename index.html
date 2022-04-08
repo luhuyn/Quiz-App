@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- TODO(you): Make whatever changes needed to complete the assignment! -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content="width = device-width, initial-scale=1.0">
+  <title>HTML Quiz</title>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/css?family=Pangolin:400,700|Proxima+Nova" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer="true"></script>
+</head>
+
+<body>
+  <!--
+
+    ******************************************
+    DO NOT TRANSCRIBE THE ARTICLE YOURSELF!!!!
+    ******************************************
+
+    You do not have to type in all of the text on the page!
+
+    The contents of the article is in `index-content.txt`, which is
+    included in this directory. Copy and paste the contents of that file into
+    this HTML file as needed. You should only need to add HTML to markup the
+    content.
+
+  -->
+
+  <header>
+    <!-- Course name -->
+    <div id="coursename">WPR</div>
+    <!-- MERN Stack(Yellow Circle) -->
+    <div id="mernstack">
+      <div class="mern"> <p>M</p> </div>
+      <div class="mern"> <p>E</p> </div>
+      <div class="mern"> <p>R</p> </div>
+      <div class="mern"> <p>N</p> </div>
+    </div>
+  </header>
+  
+  <article>
+    <!-- Quiz name -->
+    <section id="quiz-name">
+      <h1>HTML Quiz</h1>
+    </section>
+    <!-- Introduction -->
+    <section id="introduction">
+      <div class="author">    <!--the author of the assignment-->
+        <p>By Luu Huyen</p>
+      </div>
+      <div> <!--Overview-->
+        <h2>The Test</h2>
+        <p>The test contains 10 questions and there is no time limit. </p>
+        <p>The test is not official, it's just a nice way to see how much you know, or don't know, about HTML.</p>
+      </div>
+      <div> <!--Overview-->
+        <h2>Count Your Score</h2>
+        <p>You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed.
+          Maximum
+          score is 10 points.</p>
+      </div>
+      <div class="start"> <!--Start the quiz button-->
+        <h2>Start the quiz</h2>
+        <p>Good luck!</p>
+        <div class="bluebutton">
+          <button id = "startquiz">Start the HTML quiz ❯</button>
+        </div>
+      </div>
+    </section>
+  
+    <section id="attempt-quiz" class = "hidden"> <!--Attempt quiz-->
+
+      <!-- <form> 
+        <h2>Question 1 of 10</h2>
+        <h3>question 1</h3>
+        <div class="option"> 
+          <input type="radio" id="option1question1" value="option1 question1" name="answer 1">
+          <label for="option1question1">option 1</label>
+        </div>
+        <div class="option"> 
+          <input type="radio" id="option2question1" value="option2 question1" name="answer 1">
+          <label for="option2question1">option 2</label>
+        </div>
+        <div class="option"> 
+          <input type="radio" id="option3question1" value="option3 question1" name="answer 1">
+          <label for="option3question1">option 3</label>
+        </div>
+        <div class="option"> 
+          <input type="radio" id="option4question1" value="option4 question1" name="answer 1">
+          <label for="option4question1">option 4</label>
+        </div>
+      </form>
+  
+ 
+      <div class="greenbutton">
+        <button id = "submitquiz">Submit your answers ❯ </button>
+      </div>  -->
+    </section>
+  
+    <section id="review-quiz" class = "hidden"> <!--Review after completing the quiz-->    
+      <div class="result"> <!--Result view-->
+        <h2>Result:</h2>
+        <p id = "numberofcorrectedanswers">1/10</p> <!--number of corrected answers-->
+        <p id = "percent"><strong>10%</strong></p>
+        <p id = "text">Practice more to improve it :D</p>
+        <div class="bluebutton"> <!--Try quiz again button-->
+          <button id = "tryagain">Try again</button>
+        </div>
+      </div>
+    </section>
+  </article>
+</body>
+
+</html>
